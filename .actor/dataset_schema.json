@@ -1,8 +1,6 @@
 {
     "actorSpecification": 1,
     "title": "GitHub Repository Insights Output",
-    "type": "object",
-    "schemaVersion": 1,
     "properties": {
         "type": {
             "type": "string",
