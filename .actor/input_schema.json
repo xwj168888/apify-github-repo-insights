@@ -7,6 +7,7 @@
             "title": "Repository List",
             "type": "array",
             "description": "List of GitHub repositories in 'owner/repo' format (e.g. 'apify/apify-sdk-python', 'facebook/react')",
+            "editor": "stringList",
             "prefill": ["apify/apify-sdk-python", "facebook/react", "microsoft/vscode"],
             "items": {
                 "type": "string",
@@ -17,6 +18,7 @@
             "title": "GitHub Personal Access Token",
             "type": "string",
             "description": "Optional: GitHub token for higher rate limits (5000/hr vs 60/hr). Create at github.com/settings/tokens",
+            "editor": "textfield",
             "prefill": ""
         }
     },
