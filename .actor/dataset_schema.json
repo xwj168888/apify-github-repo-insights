@@ -89,5 +89,25 @@
             "type": "object",
             "description": "Community health metrics"
         }
+    },
+    "views": {
+        "overview": {
+            "title": "Repository Overview",
+            "transformation": {
+                "fields": [
+                    "full_name",
+                    "language",
+                    "stars",
+                    "forks",
+                    "open_issues",
+                    "license",
+                    "created_at",
+                    "updated_at"
+                ]
+            },
+            "display": {
+                "type": "table"
+            }
+        }
     }
 }
