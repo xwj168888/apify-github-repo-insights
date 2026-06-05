@@ -1,0 +1,18 @@
+{
+    "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+    "actorSpecification": 1,
+    "name": "github-repo-insights",
+    "title": "GitHub Repository Insights Extractor",
+    "description": "Extract structured data about GitHub repositories: stars, forks, languages, releases, community health metrics, and more. Perfect for tech due diligence, competitive analysis, and open-source research.",
+    "version": "1.0",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "python-start",
+        "generatedBy": "Claude Code Agent"
+    },
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}
