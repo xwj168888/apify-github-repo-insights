@@ -1,0 +1,92 @@
+{
+    "title": "GitHub Repository Insights Output",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "type": {
+            "type": "string",
+            "description": "Record type identifier"
+        },
+        "full_name": {
+            "type": "string",
+            "description": "Full repository name (owner/repo)"
+        },
+        "name": {
+            "type": "string",
+            "description": "Repository name"
+        },
+        "description": {
+            "type": "string",
+            "description": "Repository description"
+        },
+        "homepage": {
+            "type": "string",
+            "description": "Project homepage URL"
+        },
+        "language": {
+            "type": "string",
+            "description": "Primary programming language"
+        },
+        "stars": {
+            "type": "integer",
+            "description": "Stargazers count"
+        },
+        "forks": {
+            "type": "integer",
+            "description": "Forks count"
+        },
+        "open_issues": {
+            "type": "integer",
+            "description": "Open issues count"
+        },
+        "watchers": {
+            "type": "integer",
+            "description": "Watchers count"
+        },
+        "default_branch": {
+            "type": "string",
+            "description": "Default branch name"
+        },
+        "license": {
+            "type": "string",
+            "description": "SPDX license identifier"
+        },
+        "created_at": {
+            "type": "string",
+            "description": "Creation timestamp"
+        },
+        "updated_at": {
+            "type": "string",
+            "description": "Last update timestamp"
+        },
+        "pushed_at": {
+            "type": "string",
+            "description": "Last push timestamp"
+        },
+        "size_kb": {
+            "type": "integer",
+            "description": "Repository size in KB"
+        },
+        "archived": {
+            "type": "boolean",
+            "description": "Whether repo is archived"
+        },
+        "topics": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Repository topics/tags"
+        },
+        "languages": {
+            "type": "object",
+            "description": "Language breakdown with byte counts and percentages"
+        },
+        "latest_release": {
+            "type": "object",
+            "description": "Latest release tag, name, date, and download count"
+        },
+        "community": {
+            "type": "object",
+            "description": "Community health metrics"
+        }
+    }
+}
