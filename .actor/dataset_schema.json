@@ -1,6 +1,117 @@
 {
     "actorSpecification": 1,
     "title": "GitHub Repository Insights Output",
+    "fields": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+            "type": {
+                "type": "string",
+                "description": "Record type identifier",
+                "example": "repo_insights"
+            },
+            "full_name": {
+                "type": "string",
+                "description": "Full repository name (owner/repo)",
+                "example": "facebook/react"
+            },
+            "name": {
+                "type": "string",
+                "description": "Repository name",
+                "example": "react"
+            },
+            "description": {
+                "type": "string",
+                "description": "Repository description",
+                "example": "The library for web and native user interfaces."
+            },
+            "homepage": {
+                "type": "string",
+                "description": "Project homepage URL",
+                "example": "https://react.dev"
+            },
+            "language": {
+                "type": "string",
+                "description": "Primary programming language",
+                "example": "JavaScript"
+            },
+            "stars": {
+                "type": "integer",
+                "description": "Stargazers count",
+                "example": 245000
+            },
+            "forks": {
+                "type": "integer",
+                "description": "Forks count",
+                "example": 51000
+            },
+            "open_issues": {
+                "type": "integer",
+                "description": "Open issues count",
+                "example": 1300
+            },
+            "watchers": {
+                "type": "integer",
+                "description": "Watchers count",
+                "example": 245000
+            },
+            "default_branch": {
+                "type": "string",
+                "description": "Default branch name",
+                "example": "main"
+            },
+            "license": {
+                "type": "string",
+                "description": "SPDX license identifier",
+                "example": "MIT"
+            },
+            "created_at": {
+                "type": "string",
+                "description": "Creation timestamp",
+                "example": "2013-05-24T16:15:54Z"
+            },
+            "updated_at": {
+                "type": "string",
+                "description": "Last update timestamp",
+                "example": "2026-06-04T13:54:24Z"
+            },
+            "pushed_at": {
+                "type": "string",
+                "description": "Last push timestamp",
+                "example": "2026-06-03T21:37:08Z"
+            },
+            "size_kb": {
+                "type": "integer",
+                "description": "Repository size in KB",
+                "example": 992670
+            },
+            "archived": {
+                "type": "boolean",
+                "description": "Whether repo is archived",
+                "example": false
+            },
+            "topics": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Repository topics/tags",
+                "example": ["react", "javascript", "frontend"]
+            },
+            "languages": {
+                "type": "object",
+                "description": "Language breakdown with byte counts and percentages"
+            },
+            "latest_release": {
+                "type": "object",
+                "description": "Latest release tag, name, date, and download count"
+            },
+            "community": {
+                "type": "object",
+                "description": "Community health metrics"
+            }
+        },
+        "required": [],
+        "additionalProperties": true
+    },
     "views": {
         "overview": {
             "title": "Overview",
@@ -17,7 +128,41 @@
                 ]
             },
             "display": {
-                "type": "table"
+                "component": "table",
+                "properties": {
+                    "full_name": {
+                        "label": "Repository",
+                        "format": "text"
+                    },
+                    "language": {
+                        "label": "Language",
+                        "format": "text"
+                    },
+                    "stars": {
+                        "label": "Stars",
+                        "format": "number"
+                    },
+                    "forks": {
+                        "label": "Forks",
+                        "format": "number"
+                    },
+                    "open_issues": {
+                        "label": "Open Issues",
+                        "format": "number"
+                    },
+                    "license": {
+                        "label": "License",
+                        "format": "text"
+                    },
+                    "created_at": {
+                        "label": "Created",
+                        "format": "date"
+                    },
+                    "updated_at": {
+                        "label": "Updated",
+                        "format": "date"
+                    }
+                }
             }
         }
     }
